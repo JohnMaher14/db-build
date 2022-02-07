@@ -108,6 +108,9 @@ THE SOFTWARE.
 jquery-fancybox
 ISC
 
+ngx-facebook
+MIT
+
 ngx-owl-carousel-o
 MIT
 
