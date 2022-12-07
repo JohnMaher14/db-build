@@ -1,6 +1,4 @@
-$(window).ready(function(){
-  $(".loader").delay(800).fadeOut(2000)
-})
+
 $(window).on("load", function () {
   "use strict";
   /* ===================================
@@ -70,62 +68,39 @@ jQuery(function ($) {
   /* ===================================
         Side Menu
     ====================================== */
-  if ($("#sidemenu_toggle,#sidemenu_toggle1").length) {
-    $("#sidemenu_toggle,#sidemenu_toggle1").on("click", function () {
-      $(".side-menu").removeClass("side-menu-opacity");
-      $(".pushwrap").toggleClass("active");
-      $(".side-menu").addClass("side-menu-active"),
-        $("#close_side_menu").fadeIn(700);
-    }),
-      $("#close_side_menu").on("click", function () {
-        $(".side-menu").removeClass("side-menu-active"),
-          $(this).fadeOut(200),
-          $(".pushwrap").removeClass("active");
-        setTimeout(function () {
-          $(".side-menu").addClass("side-menu-opacity");
-        }, 500);
-      }),
-      $(".side-nav .navbar-nav .nav-link").on("click", function () {
-        $(".side-menu").removeClass("side-menu-active"),
-          $("#close_side_menu").fadeOut(200),
-          $(".pushwrap").removeClass("active");
-        setTimeout(function () {
-          $(".side-menu").addClass("side-menu-opacity");
-        }, 500);
-      }),
-      $(".navbar-nav li ul.dropdown-menu a").on("click", function (e) {
-        e.preventDefault()
-        $(".side-menu").removeClass("side-menu-active"),
-          $("#close_side_menu").fadeOut(200),
-          $(".pushwrap").removeClass("active");
-        setTimeout(function () {
-          $(".side-menu").addClass("side-menu-opacity");
-        }, 500);
-      }),
-      $("#btn_sideNavClose").on("click", function () {
-        $(".side-menu").removeClass("side-menu-active"),
-          $("#close_side_menu").fadeOut(200),
-          $(".pushwrap").removeClass("active");
-        setTimeout(function () {
-          $(".side-menu").addClass("side-menu-opacity");
-        }, 500);
-      });
-  }
+    // $(".side-nav .navbar-nav .nav-link").on("click", function () {
+    //   $(".side-menu").removeClass("side-menu-active"),
+    //     $("#close_side_menu").fadeOut(200),
+    //     $(".pushwrap").removeClass("active");
+    //   setTimeout(function () {
+    //     $(".side-menu").addClass("side-menu-opacity");
+    //   }, 500);
+    // }),
+    // $(".navbar-nav li ul.dropdown-menu a").on("click", function (e) {
+    //   e.preventDefault()
+    //   $(".side-menu").removeClass("side-menu-active"),
+    //     $("#close_side_menu").fadeOut(200),
+    //     $(".pushwrap").removeClass("active");
+    //   setTimeout(function () {
+    //     $(".side-menu").addClass("side-menu-opacity");
+    //   }, 500);
+    // }),
+
 
   /* ===================================
       WOW Animation
    ====================================== */
 
-  if ($(window).width() > 991) {
-    var wow = new WOW({
-      boxClass: "wow",
-      animateClass: "animated",
-      offset: 0,
-      mobile: false,
-      live: true,
-    });
-    new WOW().init();
-  }
+  // if ($(window).width() > 991) {
+  //   var wow = new WOW({
+  //     boxClass: "wow",
+  //     animateClass: "animated",
+  //     offset: 0,
+  //     mobile: false,
+  //     live: true,
+  //   });
+  //   new WOW().init();
+  // }
   $(function () {
     $('[data-toggle="popover"]').popover()
   })
@@ -136,19 +111,20 @@ jQuery(function ($) {
      Mouse parallax
 ====================================== */
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    $(".btn_up").fadeIn(500)
-  } else {
-    $(".btn_up").fadeOut(500)
-  }
+// $(window).scroll(function() {
+//   if ($(window).scrollTop() > 300) {
+//     $(".btn_up").fadeIn(500)
+//   } else {
+//     $(".btn_up").fadeOut(500)
+//   }
 
-});
-$("a.my-tool-tip").tooltip();
-$(".btn_up").on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
+// });
+
+
+// $("a.my-tool-tip").tooltip();
+// $(".btn_up").on('click', function() {
+//   $('html, body').animate({scrollTop:0}, '300');
+// });
 
   // if ($(window).width() > 991) {
   //   $(".banner .main_slider_content .main_slider_header, header , .service-details , .about_us_title , .team-details .title, .about-details .title , .services-section .section-header , .contact-sec .heading , .testimonial-page .heading , .review_section h2" ).mousemove(function (e) {
